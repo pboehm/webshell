@@ -11,6 +11,7 @@ import subprocess
 ALLOWED_COMMANDS = OrderedDict([
    ["du -sch ~/Downloads/*", "du -sch ~/Downloads/*"],
    ["du -sch ~/dirty/*",     "du -sch ~/dirty/*"],
+   ["tree ~/Queue",          "tree ~/Queue"],
    ["series",                "~/gocode/bin/series"],
    ["r",                     "~/projects/Scripts/remove_watched_episodes.sh"],
 ])

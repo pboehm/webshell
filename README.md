@@ -11,7 +11,7 @@ From inside the project directory, having `websocketd` installed, you can run
 it with:
 
 ```bash
-$ websocketd --port=8888 --passenv=USER,HOME --staticdir=html/ ./webshell.py
+$ websocketd --port=8888 --passenv=USER,HOME,PATH --staticdir=html/ ./webshell.py
 ```
 
 ## Security concerns
