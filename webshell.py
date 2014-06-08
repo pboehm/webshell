@@ -12,7 +12,7 @@ ALLOWED_COMMANDS = OrderedDict([
    ["du -sch ~/Downloads/*", "du -sch ~/Downloads/*"],
    ["du -sch ~/dirty/*",     "du -sch ~/dirty/*"],
    ["series",                "~/gocode/bin/series"],
-   ["r",                     "~/projects/Scripts/remove_watched_episodes.sh'"],
+   ["r",                     "~/projects/Scripts/remove_watched_episodes.sh"],
 ])
 
 # send the allowed commands to th shell
@@ -26,6 +26,7 @@ while True:
     if cmd in ALLOWED_COMMANDS:
         try:
             print subprocess.check_output(ALLOWED_COMMANDS[cmd], shell=True)
+            print "[program exited]"
         except Exception, e:
             print "ERROR: %s" % e
 
