@@ -9,11 +9,13 @@ import subprocess
 # through webshell. This is also a security feature as it only executes
 # commands which are in this dict
 ALLOWED_COMMANDS = OrderedDict([
-   ["du -sch ~/Downloads/*", "du -sch ~/Downloads/*"],
-   ["du -sch ~/dirty/*",     "du -sch ~/dirty/*"],
-   ["tree ~/Queue",          "tree ~/Queue"],
-   ["series",                "~/gocode/bin/series"],
-   ["r",                     "~/projects/Scripts/remove_watched_episodes.sh"],
+   ["du -sch ~/Downloads/*",   "du -sch ~/Downloads/*"],
+   ["du -sch ~/dirty/*",       "du -sch ~/dirty/*"],
+   ["series",                  "~/gocode/bin/series"],
+   ["tree ~/Queue",            "tree ~/Queue"],
+   ["rm ~/Downloads/*",        "rm ~/Downloads/*"],
+   ["remove_watched_episodes", "~/projects/Scripts/remove_watched_episodes.sh"],
+   ["mediatomb restart",       "sudo service mediatomb restart"],
 ])
 
 # send the allowed commands to th shell
