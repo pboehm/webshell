@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python -u
 
 from sys import stdout
 from collections import OrderedDict
