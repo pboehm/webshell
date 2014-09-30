@@ -19,7 +19,7 @@ $ websocketd --port=8888 --passenv=USER,HOME,PATH --staticdir=html/ ./webshell.p
 **You shouldn't make this publicly accessible!!!**
 
 Use a normal webserver (nginx, apache ...) as a reverse proxy with a suitable
-authentication method configured.
+authentication method configured. [Follow these instructions for a cookie-based authentication using Nginx.](http://blog.pboehm.org/blog/2014/07/19/authentication-for-websockets/)
 
 ## Licence
 Copyright (C) 2014 Philipp Böhm
