@@ -11,11 +11,18 @@ import subprocess
 ALLOWED_COMMANDS = OrderedDict([
    ["du -sch ~/Downloads/*",   "du -sch ~/Downloads/*"],
    ["du -sch ~/dirty/*",       "du -sch ~/dirty/*"],
-   ["series",                  "~/gocode/bin/series"],
-   ["tree ~/Queue",            "tree ~/Queue"],
+   ["series",                  "~/bin/series"],
+   ["tree ~/Queue/",           "tree -l ~/dlna/Queue*"],
    ["rm ~/Downloads/*",        "rm ~/Downloads/*"],
+   ["killall junkie",          "killall junkie"],
    ["remove_watched_episodes", "~/projects/Scripts/remove_watched_episodes.sh"],
-   ["mediatomb restart",       "sudo service mediatomb restart"],
+   ["restart minidlna", "sudo service minidlna restart"],
+   ["tv on/off", "irsend SEND_ONCE lg KEY_POWER"],
+   ["tv prog+", "irsend SEND_ONCE lg KEY_CHANNELUP"],
+   ["tv prog-", "irsend SEND_ONCE lg KEY_CHANNELDOWN"],
+   ["sound on/off", "irsend SEND_ONCE logitech POWER"],
+   ["sound vol+", "irsend SEND_ONCE logitech VOL_PLUS"],
+   ["sound vol-", "irsend SEND_ONCE logitech VOL_MINUS"],
 ])
 
 # send the allowed commands to th shell
